@@ -239,4 +239,4 @@ jobs:
       - name: "Checkout repositorio"
         uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Ejecutar test de humo en Docker"
-        run: docker-compose -f docker-compose.test.yml up --exit-code-from sut
+        run: docker compose -f docker-compose.test.yml up --exit-code-from sut
