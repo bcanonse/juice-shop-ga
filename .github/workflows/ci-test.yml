@@ -17,7 +17,7 @@ jobs:
       - name: "Configurar Node 22"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v6: v6.0.0
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{env.NODE_VERSION}}
       - name: "Instalar CLI de Angular"
         run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "Instalar dependencias"
@@ -50,7 +50,7 @@ jobs:
       - name: "Configurar Node 22"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{env.NODE_VERSION}}
       - name: "Instalar CLI de Angular"
         run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "Instalar dependencias"
@@ -82,7 +82,7 @@ jobs:
       - name: "Configurar Node 22"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{env.NODE_VERSION}}
       - name: "Instalar CLI de Angular"
         run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "Instalar dependencias"
@@ -143,7 +143,7 @@ jobs:
       - name: "Configurar Node 22"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{env.NODE_VERSION}}
       - name: "Instalar CLI de Angular"
         run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "Instalar aplicación"
@@ -179,7 +179,7 @@ jobs:
       - name: "Configurar Node 22"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{env.NODE_VERSION}}
       - name: "Instalar CLI de Angular"
         run: npm install -g @angular/cli@$ANGULAR_CLI_VERSION
       - name: "Instalar aplicación"
@@ -206,7 +206,7 @@ jobs:
       - name: "Configurar Node 22"
         uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
-          node-version: $NODE_VERSION
+          node-version: ${{env.NODE_VERSION}}
       - name: "Instalar CLI de Angular"
         run: |
           npm install -g @angular/cli@$ANGULAR_CLI_VERSION
