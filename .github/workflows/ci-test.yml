@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v6: v6.0.0
       - name: "Configurar Node 22"
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c #v3: v3.6.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v6: v6.0.0
         with:
           node-version: $NODE_VERSION
       - name: "Instalar CLI de Angular"
@@ -46,9 +46,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Configurar Node 22"
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c #v3: v3.6.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
           node-version: $NODE_VERSION
       - name: "Instalar CLI de Angular"
@@ -67,7 +67,7 @@ jobs:
           cp build/reports/coverage/frontend-tests/lcov.info frontend-lcov.info
           cp build/reports/coverage/server-tests/lcov.info server-lcov.info
       - name: "Subir información de test coverage pruebas unitarias"
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce #v3: v3.1.2
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 #v3: v3.1.2
         with:
           name: unit-test-lcov
           path: |
@@ -78,9 +78,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Configurar Node 22"
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c #v3: v3.6.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
           node-version: $NODE_VERSION
       - name: "Instalar CLI de Angular"
@@ -100,7 +100,7 @@ jobs:
       - name: "Copiar información de test coverage pruebas integración"
         run: cp build/reports/coverage/api-tests/lcov.info api-lcov.info
       - name: "Subir información de test coverages pruebas integración"
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce #v3: v3.1.2
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 #v3: v3.1.2
         with:
           name: api-test-lcov
           path: |
@@ -112,13 +112,13 @@ jobs:
     if: github.repository == 'juice-shop/juice-shop' && github.event_name == 'push'
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Descargar información de test coverage pruebas unitarias"
-        uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a #v3: v3.0.2
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 #v6: v3.0.2
         with:
           name: unit-test-lcov
       - name: "Descargar información de test coverage pruebas integración"
-        uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a #v3: v3.0.2
+        uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 #v6: v3.0.2
         with:
           name: api-test-lcov
       - name: "Publish coverage to Codeclimate"
@@ -139,9 +139,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Configurar Node 22"
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c #v3: v3.6.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
           node-version: $NODE_VERSION
       - name: "Instalar CLI de Angular"
@@ -175,9 +175,9 @@ jobs:
       fail-fast: false
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Configurar Node 22"
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c #v3: v3.6.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
           node-version: $NODE_VERSION
       - name: "Instalar CLI de Angular"
@@ -202,9 +202,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Configurar Node 22"
-        uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c #v3: v3.6.0
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 #v3: v3.6.0
         with:
           node-version: $NODE_VERSION
       - name: "Instalar CLI de Angular"
@@ -237,6 +237,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout repositorio"
-        uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f #v3: v3.4.0
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v3: v3.4.0
       - name: "Ejecutar test de humo en Docker"
         run: docker-compose -f docker-compose.test.yml up --exit-code-from sut
